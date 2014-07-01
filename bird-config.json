@@ -1,0 +1,25 @@
+{
+
+  "servers": {
+    "8787": {
+      "basePath": "E:/baidu-svn/gcrm/src/main/webapp/front"
+    },
+    "7676": {
+      "basePath": "E:/baidu-svn/gcrm/src/main/webapp/front"
+    }
+  },
+  "transRules": {
+    "7676": {
+      "targetServer": {
+        "host": "10.46.133.242",
+        "port": "8101"
+      },
+      "regExpPath": {
+        "gcrm/": {
+          "path": "gcrm/"
+        }
+      }
+    },
+    "ajaxOnly": false
+  }
+}

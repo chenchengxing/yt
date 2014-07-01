@@ -1,0 +1,17 @@
+{
+  "name": "yt-angular",
+  "version": "0.0.1",
+  "description": "yt for angularjs",
+  "keywords": ["yt","油条"],
+  "homepage": "https://github.com/chenchengxing/yt",
+  "author": {
+    "name": "ccx",
+    "email" : "ccxsungodzzx@gmail.com"
+  },
+  "dependencies": {
+    "gulp-bird": "*"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.5"
+  }
+}
