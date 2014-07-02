@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+
+var yt = require('commander');
+var init = require('../lib/init');
+yt
+  .version('0.0.1')
+
+yt
+  .command('init')
+  .description('initialize an angular project')
+  .action(init);
+
+yt
+  .command('hi')
+  .description('initialize project configuration')
+  .action(function(){
+    console.log('Hi my Friend!!!');
+
+});
+
+yt
+  .command('bye [name]')
+  .description('initialize project configuration')
+  .action(function(name){
+    console.log('Bye ' + name + '. It was good to see you!');
+
+});
+
+yt
+  .command('*')
+  .action(function(env){
+    console.log('Enter a Valid command');
+    terminate(true);
+});
+
+
+yt.parse(process.argv);

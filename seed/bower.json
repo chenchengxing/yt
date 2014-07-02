@@ -1,0 +1,17 @@
+{
+  "name": "yt",
+  "devDependencies": {
+    "jquery": "~1.8.3",
+    "bootstrap": "3.0.3",
+    "requirejs": "2.1.8",
+    "angular-bootstrap": "0.10.0",
+    "angular": "1.2.8",
+    "angular-ui-router": "0.2.0",
+    "angular-couch-potato": "v0.1.1",
+    "es5-shim": "*",
+    "angular-loading-bar": "0.4.3"
+  },
+  "resolutions": {
+    "jquery": "~1.8.3"
+  }
+}

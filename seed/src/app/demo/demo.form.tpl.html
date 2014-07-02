@@ -1,0 +1,105 @@
+<div>
+    <div ng-form="simple" class="form-horizontal">
+        <fieldset>
+            <legend>
+                简单表单元素
+            </legend>
+            <div class="row">
+                <div class="span6">
+                    <div class="control-group">
+                        <label class="control-label">input-text</label>
+                        <div class="controls">
+                            <input type="text" required ng-model="simpleForm.inputText" id="inputText" placeholder="input some text here...">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">textarea</label>
+                        <div class="controls">
+                            <textarea rows="6" ng-model="simpleForm.textarea" required yt-minlength="4" yt-maxlength="10" popover="长度限制4-10个字符" popover-trigger="focus" popover-append-to-body="true" popover-placement="right"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">checkbox</label>
+                        <div class="controls">
+                            <label class="checkbox inline" ng-repeat="color in colors">
+                              <input type="checkbox" checklist-model="simpleForm.inputCheckbox" checklist-value="color"><span>{{color}}</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">radio</label>
+                        <div class="controls">
+                            <label class="redio" ng-repeat="gen in genders">
+                                <input type="radio" value="{{gen}}" ng-model="simpleForm.inputRadio"><span>{{gen}}</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">select</label>
+                        <div class="controls">
+                            <select required ng-model="simpleForm.select" ng-options="customer.userId as customer.name group by customer.gender for customer in customers">
+                                <option value="">nobody</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">multiple select</label>
+                        <div class="controls">
+                            <select size="6" multiple ng-multiple="true" ng-model="simpleForm.multiSelect" ng-options="customer.name for customer in customers"  popover="use ctrl/shift to multiple selection" popover-trigger="focus" popover-append-to-body="true" popover-placement="right">
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">button</label>
+                        <div class="controls">
+                            <button class="btn btn-primary" ng-disabled="!simple.$valid" ng-click="alertValues();">confirm</button>
+                            <button class="btn btn-link" ng-click="emptyAll();">empty all</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="span6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="width:80px">item</th>
+                                <th>valuse</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>inputText</td>
+                                <td>{{simpleForm.inputText}}</td>
+                            </tr>
+                            <tr>
+                                <td>textarea</td>
+                                <td>{{simpleForm.textarea}}</td>
+                            </tr>
+                            <tr>
+                                <td>inputCheckbox</td>
+                                <td>{{simpleForm.inputCheckbox}}</td>
+                            </tr>
+                            <tr>
+                                <td>inputRadio</td>
+                                <td>{{simpleForm.inputRadio}}</td>
+                            </tr>
+                            <tr>
+                                <td>select</td>
+                                <td>{{simpleForm.select}}</td>
+                            </tr>
+                            <tr>
+                                <td>select</td>
+                                <td>{{simpleForm.multiSelect | json}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+</div>

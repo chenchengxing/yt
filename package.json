@@ -1,17 +1,27 @@
 {
   "name": "yt-angular",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "yt for angularjs",
-  "keywords": ["yt","油条"],
+  "keywords": [
+    "yt",
+    "油条"
+  ],
   "homepage": "https://github.com/chenchengxing/yt",
   "author": {
     "name": "ccx",
-    "email" : "ccxsungodzzx@gmail.com"
+    "email": "ccxsungodzzx@gmail.com"
   },
   "dependencies": {
-    "gulp-bird": "*"
+    "gulp-bird": "*",
+    "commander": "~2.2.0"
   },
   "devDependencies": {
-    "gulp": "~3.8.5"
+    "gulp": "~3.8.5",
+    "commander": "~2.2.0",
+    "wrench": "~1.5.8",
+    "colors": "~0.6.2"
+  },
+  "bin": {
+    "yt": "./bin/yt"
   }
 }
