@@ -6,6 +6,7 @@
     "jshint-stylish": "~0.2.0",
     "gulp-replace": "~0.3.0",
     "gulp-clean": "~0.3.1",
-    "merge-stream": "~0.1.2"
+    "merge-stream": "~0.1.2",
+    "gulp-livereload": "~2.1.0"
   }
 }

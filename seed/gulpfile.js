@@ -71,3 +71,24 @@ gulp.task('start', function() {
   bird.start(birdConfig.servers, birdConfig.transRules);
   gulp.watch('./src/app/**', ['lint', 'build']);
 });
+
+var livereload = require('gulp-livereload'),
+    dest = 'build';
+
+gulp.task('server', function(next) {
+  var connect = require('connect'),
+      server = connect();
+  server.use(connect.static(dest)).listen(35727, next);
+});
+
+gulp.task('watch', function() {
+  bird.start(birdConfig.servers, birdConfig.transRules);
+  var server = livereload();
+  server.changed();
+  var watcher = gulp.watch('src/**', ['lint', 'build']);
+  watcher.on('change', function(file) {
+    setTimeout(function () {
+      server.changed(file.path);
+    },1000)
+  });
+});
