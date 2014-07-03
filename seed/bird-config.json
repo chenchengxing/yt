@@ -1,7 +1,7 @@
 {
   "servers": {
     "7676": {
-      "basePath": "E:/git-projects/yt/seed/build"
+      "basePath": "{{buildPath}}"
     }
   },
   "transRules": {
