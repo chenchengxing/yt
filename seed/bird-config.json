@@ -1,0 +1,21 @@
+{
+  "servers": {
+    "7676": {
+      "basePath": "E:/git-projects/yt/seed/build"
+    }
+  },
+  "transRules": {
+    "7676": {
+      "targetServer": {
+        "host": "10.46.133.242",
+        "port": "8101"
+      },
+      "regExpPath": {
+        "gcrm/": {
+          "path": "gcrm/"
+        }
+      }
+    },
+    "ajaxOnly": false
+  }
+}

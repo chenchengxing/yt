@@ -1,6 +1,6 @@
 {
   "name": "yt-angular",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "yt for angularjs",
   "keywords": [
     "yt",
@@ -13,13 +13,13 @@
   },
   "dependencies": {
     "gulp-bird": "*",
-    "commander": "~2.2.0"
-  },
-  "devDependencies": {
-    "gulp": "~3.8.5",
     "commander": "~2.2.0",
     "wrench": "~1.5.8",
     "colors": "~0.6.2"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.5",
+    "commander": "~2.2.0"
   },
   "bin": {
     "yt": "./bin/yt"

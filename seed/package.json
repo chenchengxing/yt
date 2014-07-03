@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "gulp-bird": "*",
+    "gulp": "~3.8.5",
+    "gulp-jshint": "~1.6.4",
+    "jshint-stylish": "~0.2.0",
+    "gulp-replace": "~0.3.0",
+    "gulp-clean": "~0.3.1",
+    "merge-stream": "~0.1.2"
+  }
+}
