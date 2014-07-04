@@ -27,19 +27,72 @@ define(['app'], function(app) {
       };
       // $locationProvider.html5Mode(true);
 
-      $urlRouterProvider.otherwise('demo');
+      $urlRouterProvider.otherwise('home');
+
 
       var baseUrl = STATIC_DIR + "app/";
       var headerConfig = {
-        templateUrl: baseUrl + '_common/header/header.tpl.html',
-        controller: 'CtrlHeader',
-        resolve: {
-          ctrl: $couchPotatoProvider.resolveDependencies(['_common/header/CtrlHeader'])
-        }
+        templateUrl: baseUrl + '_common/header/header.tpl.html'
       };
       var footerConfig = {
         templateUrl: baseUrl + '_common/footer/footer.tpl.html'
       };
+      // Home
+      $stateProvider.state('home', {
+        url: '/home',
+        views: {
+          'body': {
+            templateUrl: baseUrl + 'home/home.tpl.html',
+          },
+          header: headerConfig,
+          footer: footerConfig
+        }
+      });
+      // List
+      $stateProvider.state('list', {
+        url: '/list',
+        views: {
+          'body': {
+            templateUrl: baseUrl + 'demo/list/list.tpl.html',
+            controller: 'CtrlList',
+            resolve: {
+              ctrl: $couchPotatoProvider.resolveDependencies(['demo/list/CtrlList'])
+            }
+          },
+          header: headerConfig,
+          footer: footerConfig
+        }
+      });
+      // Detail
+      $stateProvider.state('detail', {
+        url: '/detail?id',
+        views: {
+          'body': {
+            templateUrl: baseUrl + 'demo/detail/detail.tpl.html',
+            controller: 'CtrlDetail',
+            resolve: {
+              ctrl: $couchPotatoProvider.resolveDependencies(['demo/detail/CtrlDetail'])
+            }
+          },
+          header: headerConfig,
+          footer: footerConfig
+        }
+      });
+      // Add
+      $stateProvider.state('add', {
+        url: '/add',
+        views: {
+          'body': {
+            templateUrl: baseUrl + 'demo/add/add.tpl.html',
+            controller: 'CtrlAdd',
+            resolve: {
+              ctrl: $couchPotatoProvider.resolveDependencies(['demo/add/CtrlAdd'])
+            }
+          },
+          header: headerConfig,
+          footer: footerConfig
+        }
+      });
       /**
        * [url description] home temp
        * @type {String}
@@ -52,24 +105,7 @@ define(['app'], function(app) {
           }
         }
       });
-      /**
-       * [url description] home
-       * @type {String}
-       */
-      $stateProvider.state('home', {
-        url: '/home',
-        views: {
-          'body': {
-            templateUrl: baseUrl + 'home/home.tpl.html',
-            controller: 'CtrlHome',
-            resolve: {
-              ctrl: $couchPotatoProvider.resolveDependencies(['home/CtrlHome'])
-            }
-          },
-          header: headerConfig,
-          footer: footerConfig
-        }
-      });
+      
       $stateProvider.state('demo', {
         url: '/demo',
         views: {

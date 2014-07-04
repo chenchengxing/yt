@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <ul class="list-group">
+        <li ng-repeat="car in carList" class="list-group-item">
+          {{car.name}}, <span class="text-info">contact</span> {{car.email}}
+        </li>
+      </ul>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Idx</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Email</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="car in carList">
+            <td>{{$index + 1}}</td>
+            <td>{{car.name}}</td>
+            <td>{{car.type}}</td>
+            <td>{{car.email}}</td>
+            <td><a class="btn btn-link" ng-click="remove($index)"><span class="glyphicon glyphicon-trash"></span></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <pre>{{carList | json}}</pre>
+    </div>
+  </div>
+  
+  
+</div>

@@ -1,0 +1,13 @@
+{
+  "code": 200,
+  "data": [
+    {{#repeat 10}}
+    {
+      "id": {{index}},
+      "name": "{{firstName}}",
+      "type": "{{lastName}}",
+      "email": "{{email}}"
+    }
+    {{/repeat}}
+  ]
+}

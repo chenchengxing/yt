@@ -1,0 +1,13 @@
+/*footer CSS*/
+html,
+body{ height:100%; }
+
+.app-body{ padding-bottom:54px; padding-top: 50px; }
+div[ui-view='footer'] { margin-top:-44px; position: relative; clear: both; background-color:#767a81; color:#fff; height:44px; padding-top:16px; text-align:center; font-size:12px;font-family: "微软雅黑"; }
+
+body > .wrap { height: auto; min-height: 100%; }
+
+.navbar .nav > li{ float: left;}
+.navbar .nav > li a{ color: #fff;}
+.navbar .nav > li a:hover{ background: none;}
+.navbar .nav{ margin-top: 5px;}
